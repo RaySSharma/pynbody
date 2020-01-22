@@ -225,16 +225,11 @@ class RockstarCatalogueOneCpu(HaloCatalogue):
                           ('c_to_a','f'),('A','f',3),('b_to_a2','f'),
                           ('c_to_a2','f'),('A2','f',3),('bullock_spin','f'),
                           ('kin_to_pot','f'),('m_pe_b','f'),('m_pe_d','f'),
-                          ('halfmass_radius','f'),
                           ('num_p',np.int64),('num_child_particles',np.int64),
-
                           ('p_start',np.int64),('desc',np.int64),
-                          ('flags',np.int64),('n_core',np.int64),
+                          ('n_core',np.int64),
                           ('min_pos_err','f'),('min_vel_err','f'),
-                          ('min_bulkvel_err','f'),
-                          ('child', np.int64), ('next_cochild', np.int64),
-                          ('prev_cochild', np.int64), ('sub_of', np.int64),
-                          ('ph', np.int64), ('mmetric', 'f')], align=True) # Hacked GADGET3 rockstar
+                          ('min_bulkvel_err','f')], align=True) # Hacked GADGET3 rockstar
 
     }
 
