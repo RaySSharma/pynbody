@@ -360,9 +360,12 @@ class RockstarCatalogueOneCpu(HaloCatalogue):
         self._halo_lens = np.empty(self._head['num_halos'][0],dtype=np.int64)
         offset = self._haloprops_offset+self.halo_type.itemsize*self._head['num_halos'][0]
 
-
-        self._halo_min = int(np.fromfile(f, dtype=self.halo_type, count=1)['id'])
-        self._halo_max = int(self._halo_min+self._head['num_halos'][0])
+        try:
+            self._halo_min = int(np.fromfile(f, dtype=self.halo_type, count=1)['id'])
+            self._halo_max = int(self._halo_min+self._head['num_halos'][0])
+        except TypeError:
+            self._halo_min = 0
+            self._halo_max = 0
 
         f.seek(self._haloprops_offset)
 
