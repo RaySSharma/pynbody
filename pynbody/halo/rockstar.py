@@ -189,8 +189,8 @@ class RockstarCatalogueOneCpu(HaloCatalogue):
                           ('p_start',np.int64),('desc',np.int64),
                           ('flags',np.int64),('n_core',np.int64),
                           ('min_pos_err','f'),('min_vel_err','f'),
-                          ('min_bulkvel_err','f')], align=True), # Rockstar format v2, includes halfmass_radius
-
+                          ('min_bulkvel_err','f')], align=True) # Rockstar format v2, includes halfmass_radius
+        ,
         'caterpillar': np.dtype([('id',np.int64),
                                  ('pos','f',3),('vel','f',3),
                           ('corevel','f',3),('bulkvel','f',3),('m','f'),
@@ -212,7 +212,7 @@ class RockstarCatalogueOneCpu(HaloCatalogue):
                           ('min_bulkvel_err','f'),
                           ('num_bound', 'i8'), ('num_iter', 'i8')]
                                 , align=True) # Hacked rockstar from caterpillar project
-        
+        ,
         'sphGal': np.dtype([('id',np.int64),
                           ('pos','f',3),('vel','f',3),
                           ('corevel','f',3),('bulkvel','f',3),('m','f'),
